@@ -8,7 +8,7 @@ const swaggerUi = require('swagger-ui-express');
 dotenv.config(); // Load environment variables
 
 const app = express();
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 3001;
 
 // Middleware
 app.use(cors());
@@ -24,7 +24,7 @@ const swaggerOptions = {
       description: 'API for managing customers and orders',
     },
     servers: [
-      { url: 'http://localhost:3000' }, // Update if your server runs on a different port
+      { url: 'http://localhost:3001' }, // Update if your server runs on a different port
     ],
   },
   apis: ['./src/routes/*.js'], // Path to your route files
