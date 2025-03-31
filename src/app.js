@@ -24,7 +24,7 @@ const swaggerOptions = {
       description: 'API for managing customers and orders',
     },
     servers: [
-      { url: 'http://localhost:3001' }, // Update if your server runs on a different port
+      { url: 'host.docker.internal:3001' }, // Update if your server runs on a different port
     ],
   },
   apis: ['./src/routes/*.js'], // Path to your route files
