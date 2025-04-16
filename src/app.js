@@ -1,11 +1,11 @@
+// Load environment variables immediately
+require('dotenv').config();
+
 const express = require('express');
 const mongoose = require('mongoose');
-const dotenv = require('dotenv');
 const cors = require('cors');
 const swaggerJsDoc = require('swagger-jsdoc');
 const swaggerUi = require('swagger-ui-express');
-
-dotenv.config(); // Load environment variables
 
 const app = express();
 const port = process.env.PORT || 3001;
@@ -24,7 +24,7 @@ const swaggerOptions = {
       description: 'API for managing customers and orders',
     },
     servers: [
-      { url: 'host.docker.internal:3001' }, // Update if your server runs on a different port
+      { url: 'host.docker.internal:3001' },
     ],
   },
   apis: ['./src/routes/*.js'], // Path to your route files
